@@ -2,29 +2,97 @@
 
 <PropertyList>
  	<path>AW139.ac</path>
-	<offsets>
-		<z-m>0</z-m>
-		<y-m>0.0</y-m>
-		<x-m>0</x-m>
-
-		<pitch-deg>0</pitch-deg>
-	</offsets>
 	
-  <nasal>
+  <!-- <nasal>
         <load>
             var livery_update = aircraft.livery_update.new(
-	    "Aircraft/aw139/Models/liveries", 10,
+	    "Aircraft/aw139/Models/Liveries", 10,
 	    func { print("aw139 livery update") });
         </load>
 
         <unload>
             livery_update.stop();
         </unload>
-    </nasal>
+    </nasal> -->
+
+      <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/aw139/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
+    </load>
+
+    <unload>
+      livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
+    </unload>
+  </nasal>
+
+<effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>frontglass</object-name>
+    <object-name>frnt-sideglass</object-name>
+    <object-name>inspection-glass</object-name>
+    <object-name>sideglass</object-name>
+    </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>fusebody</object-name>
+    <object-name>stabilizer</object-name>
+    <object-name>tail-fin</object-name>
+    <object-name>longnose</object-name>
+    <object-name>shortnose</object-name>
+    <object-name>exhaust</object-name>
+    <object-name>front-doors</object-name>
+    <object-name>side-doors</object-name>
+    <object-name>antenna</object-name>
+    <object-name>wirecutter</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>defaultaw139ext.png</texture>
+  </animation>
+
+  <!-- Main Rotor -->
+  <model>
+    <path>Aircraft/aw139/Models/main-rotor/mainrotor.xml</path>
+    <offsets>
+      <x-m>  0.00 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  1.700 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
   
+ <!-- tailrotor -->
+  <model>
+    <path>Aircraft/aw139/Models/tailrotor/tailrotor.xml</path>
+    <offsets>
+      <x-m>  8.821 </x-m>
+      <y-m>  0.417 </y-m>
+      <z-m>  1.877 </z-m>
+      <roll-deg>    14 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
 <animation>
             <type>rotate</type>
-            <object-name>wheelr</object-name>
+            <object-name>wheelR</object-name>
 	     <object-name>lowerstrutr</object-name>
 	         <object-name>upperstrutr</object-name>
            <property>/gear/gear[2]/position-norm</property>
@@ -39,9 +107,9 @@
                     </entry>
 	</interpolation>
 	 <center>
-                    <x-m>0.022</x-m>
-                    <y-m>1.439</y-m>
-                    <z-m>-1.931</z-m>
+                    <x-m>1.76</x-m>
+                    <y-m>1.36</y-m>
+                    <z-m>-1.124</z-m>
 		</center>
             <axis>
               <x>-1</x>
@@ -51,7 +119,7 @@
         </animation>
 <animation>
             <type>rotate</type>
-            <object-name>wheelr</object-name>
+            <object-name>wheelR</object-name>
 	     <object-name>lowerstrutr</object-name>
             <property>/gear/gear[2]/position-norm</property>
             <interpolation>
@@ -69,9 +137,9 @@
                     </entry>
 	</interpolation>
 	 <center>
-                    <x-m>-0.602</x-m>
-                    <y-m>0</y-m>
-                    <z-m>-2.131</z-m>
+                    <x-m>1.092</x-m>
+                    <y-m>1.360</y-m>
+                    <z-m>-1.391</z-m>
 		</center>
             <axis>
               <x>0</x>
@@ -82,7 +150,7 @@
 
 <animation>
             <type>rotate</type>
-            <object-name>wheelr</object-name>
+            <object-name>wheelR</object-name>
 	     <object-name>lowerstrutr</object-name>
             <property>/gear/gear[2]/compression-norm</property>
             <interpolation>
@@ -92,21 +160,21 @@
                     </entry>
 		 <entry>
                     <ind>0.4</ind>
-                    <dep>-55</dep>
+                    <dep>-15</dep>
                     </entry>
 		 <entry>
                     <ind>0.525</ind>
-                    <dep>-58</dep>
+                    <dep>-22</dep>
                     </entry>
 		   <entry>
                     <ind>1</ind>
-                    <dep>-60</dep>
+                    <dep>-28</dep>
                     </entry>
 	</interpolation>
 	 <center>
-                    <x-m>-0.602</x-m>
-                    <y-m>0</y-m>
-                    <z-m>-2.131</z-m>
+                    <x-m>1.092</x-m>
+                    <y-m>1.360</y-m>
+                    <z-m>-1.391</z-m>
 		</center>
             <axis>
               <x>0</x>
@@ -119,7 +187,7 @@
 
 <animation>
             <type>rotate</type>
-            <object-name>wheell</object-name>
+            <object-name>wheelL</object-name>
 	     <object-name>lowerstrutl</object-name>
 	     <object-name>upperstrutl</object-name>
            <property>/gear/gear[1]/position-norm</property>
@@ -130,23 +198,23 @@
                     </entry>
 		  <entry>
                     <ind>0</ind>
-                    <dep>90</dep>
+                    <dep>-90</dep>
                     </entry>
 	</interpolation>
 	 <center>
-                    <x-m>0.022</x-m>
-                    <y-m>-1.439</y-m>
-                    <z-m>-1.931</z-m>
+                    <x-m>1.76</x-m>
+                    <y-m>-1.36</y-m>
+                    <z-m>-1.124</z-m>
 		</center>
             <axis>
-              <x>1</x>
+              <x>-1</x>
               <y>0</y>
               <z>0</z>
             </axis>
         </animation>
 <animation>
             <type>rotate</type>
-            <object-name>wheell</object-name>
+            <object-name>wheelL</object-name>
 	     <object-name>lowerstrutl</object-name>
         <property>/gear/gear[1]/position-norm</property>
             <interpolation>
@@ -164,9 +232,9 @@
                     </entry>
 	</interpolation>
 	 <center>
-                    <x-m>-0.602</x-m>
-                    <y-m>0</y-m>
-                    <z-m>-2.131</z-m>
+                    <x-m>1.092</x-m>
+                    <y-m>-1.360</y-m>
+                    <z-m>-1.391</z-m>
 		</center>
             <axis>
               <x>0</x>
@@ -176,7 +244,7 @@
         </animation>
 <animation>
             <type>rotate</type>
-            <object-name>wheell</object-name>
+            <object-name>wheelL</object-name>
 	     <object-name>lowerstrutl</object-name>
             <property>/gear/gear[1]/compression-norm</property>
             <interpolation>
@@ -186,21 +254,21 @@
                     </entry>
 		 <entry>
                     <ind>0.4</ind>
-                    <dep>-55</dep>
+                    <dep>-15</dep>
                     </entry>
 		 <entry>
                     <ind>0.525</ind>
-                    <dep>-58</dep>
+                    <dep>-22</dep>
                     </entry>
 		   <entry>
                     <ind>1</ind>
-                    <dep>-60</dep>
+                    <dep>-28</dep>
                     </entry>
 	</interpolation>
 	 <center>
-                    <x-m>-0.602</x-m>
-                    <y-m>0</y-m>
-                    <z-m>-2.131</z-m>
+                    <x-m>1.092</x-m>
+                    <y-m>-1.360</y-m>
+                    <z-m>-1.391</z-m>
 		</center>
             <axis>
               <x>0</x>
@@ -211,13 +279,15 @@
 
 <animation>
             <type>rotate</type>
-        <object-name>wheelf</object-name>
+        <object-name>wheelFR</object-name>
 	     <object-name>Cylinder</object-name>
-	        <object-name>upperstrutf</object-name>
-		  <object-name>lowerstrutf</object-name>
+	        <object-name>frntgear-upcyl</object-name>
+		  <object-name>frntgear-lowercyl</object-name>
+              <object-name>lowerstrutf</object-name>
+              <object-name>upperstrutf</object-name>
            <property>/gear/gear[0]/caster-angle-deg</property>
              <center>
-                    <x-m>-4.456</x-m>
+                    <x-m>-2.741</x-m>
                     <y-m>0</y-m>
                     <z-m>-1.931</z-m>
 		</center>
@@ -231,10 +301,12 @@
 
 <animation>
             <type>rotate</type>
-        <object-name>wheelf</object-name>
+        <object-name>wheelFR</object-name>
 	     <object-name>Cylinder</object-name>
-	        <object-name>upperstrutf</object-name>
-		  <object-name>lowerstrutf</object-name>
+	        <object-name>frntgear-upcyl</object-name>
+		  <object-name>frntgear-lowercyl</object-name>
+              <object-name>lowerstrutf</object-name>
+              <object-name>upperstrutf</object-name>  
            <property>/gear/gear[0]/position-norm</property>
             <interpolation>
                    <entry>
@@ -243,13 +315,13 @@
                     </entry>
 		  <entry>
                     <ind>0</ind>
-                    <dep>110</dep>
+                    <dep>98</dep>
                     </entry>
 	</interpolation>
 	 <center>
-                    <x-m>-4.456</x-m>
+                    <x-m>-2.771</x-m>
                     <y-m>0</y-m>
-                    <z-m>-1.931</z-m>
+                    <z-m>-1.281</z-m>
 		</center>
             <axis>
               <x>0</x>
@@ -260,8 +332,8 @@
 
 <animation>
             <type>translate</type>
-            <object-name>wheelf</object-name>
-	     <object-name>Cylinder</object-name>
+            <object-name>wheelFR</object-name>
+	     <object-name>lowerstrutf</object-name>
          <property>/gear/gear[0]/position-norm</property>
             <interpolation>
                     <entry>
@@ -277,7 +349,11 @@
                     <dep>0.0</dep>
                     </entry>
 	</interpolation>
-	
+	          <center>
+                    <x-m>-2.741</x-m>
+                    <y-m>0</y-m>
+                    <z-m>-1.931</z-m>
+		     </center>
             <axis>
               <x>0</x>
               <y>0</y>
@@ -288,25 +364,29 @@
 
 <animation>
             <type>translate</type>
-            <object-name>wheelf</object-name>
-	     <object-name>Cylinder</object-name>
+            <object-name>wheelFR</object-name>
+	     <object-name>lowerstrutf</object-name>
             <property>/gear/gear[0]/compression-norm</property>
             <interpolation>
                     <entry>
-                    <ind>0.863</ind>
-                    <dep>0.5211</dep>
+                    <ind>0.0</ind>
+                    <dep>0.0</dep>
                     </entry>
 		<entry>
-                    <ind>0.332</ind>
-                    <dep>0.323</dep>
+                    <ind>0.5</ind>
+                    <dep>0.114</dep>
                     </entry>
 		<entry>
-		<ind>0</ind>
-                    <dep>0</dep>
+		        <ind>1.0</ind>
+                    <dep>0.227</dep>
                     </entry>
 	</interpolation>
-	
-            <axis>
+        <center>
+	     <x-m>-2.741</x-m>
+           <y-m>0</y-m>
+           <z-m>-1.931</z-m>
+        </center>
+          <axis>
               <x>0</x>
               <y>0</y>
               <z>1</z>
@@ -317,7 +397,6 @@
 
 <animation>
 		<type>select</type>
-		<!--<object-name>binocular_standart</object-name>-->
 		<object-name>longnose</object-name>
 		<condition>
 			<property>sim/model/aw139/longnose</property>
@@ -326,13 +405,100 @@
 
 <animation>
 		<type>select</type>
-		<!--<object-name>binocular_standart</object-name>-->
 		<object-name>lshortnose</object-name>
 		<condition>
 			<property>sim/model/aw139/shortnose</property>
 		</condition>
 </animation>
 	
+
+<animation>
+		<type>select</type>
+		<object-name>reardoor_right</object-name>
+		<condition>
+			<property>sim/model/aw139/reardoor_right</property>
+		</condition>
+</animation>
+
+<animation>
+		<type>select</type>
+		<object-name>reardoor_left</object-name>
+		<condition>
+			<property>sim/model/aw139/reardoor_left</property>
+		</condition>
+</animation>
+
+
+<animation>
+		<type>select</type>
+		<object-name>reardoor_wind_right</object-name>
+		<object-name>rearwind_right</object-name>
+		<condition>
+			<property>sim/model/aw139/reardoor_wind_right</property>
+		</condition>
+</animation>
+
+<animation>
+		<type>select</type>
+		<object-name>reardoor_wind_left</object-name>
+		<object-name>rearwind_left</object-name>
+		<condition>
+			<property>sim/model/aw139/reardoor_wind_left</property>
+		</condition>
+</animation>
+
+<animation>
+		<type>select</type>
+		<object-name>radom</object-name>
+		<condition>
+			<property>sim/model/aw139/radom</property>
+		</condition>
+</animation>
+
+<animation>
+		<type>select</type>
+		<object-name>wire_cutter</object-name>
+		<object-name>landinglight.002</object-name>
+		<object-name>llight.002</object-name>
+		<object-name>lightglas.002</object-name>
+		<object-name>halo.002</object-name>
+		<condition>
+			<property>sim/model/aw139/wirecutter</property>
+		</condition>
+</animation>
+
+
+<animation>
+		<type>select</type>
+		<object-name>winch</object-name>
+		<condition>
+			<property>sim/model/aw139/winch</property>
+		</condition>
+</animation>
+
+<animation>
+		<type>select</type>
+		<object-name>FLIR</object-name>
+		<condition>
+			<property>sim/model/aw139/FLIR</property>
+		</condition>
+</animation>
+
+<animation>
+		<type>select</type>
+		<object-name>searchlight_left</object-name>
+		<condition>
+			<property>sim/model/aw139/searchlight_left</property>
+		</condition>
+</animation>
+
+<animation>
+		<type>select</type>
+		<object-name>searchlight_front</object-name>
+		<condition>
+			<property>sim/model/aw139/searchlight_front</property>
+		</condition>
+</animation>
 
 
 

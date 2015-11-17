@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+		<model>
+				<livery>
+					<name type="string">default</name>
+					 <index type="int">1</index>
+					  <texture>defaultaw139ext.png</texture>
+				</livery>
+				<aw139>
+				<hide-gsdi>true</hide-gsdi>
+				<radom type="bool">false</radom>
+				<winch>false</winch>
+				<searchlight_front>false</searchlight_front>
+				<wirecutter>false</wirecutter>
+				<FLIR>false</FLIR>
+				<reardoor_right>true</reardoor_right>
+				<reardoor_left>true</reardoor_left>
+				<reardoor_wind_right>false</reardoor_wind_right>
+				<reardoor_wind_left>false</reardoor_wind_left>
+			<rotor>
+				 <texture>white.png</texture>
+			</rotor>
+			</aw139>
+		 </model>
+	</sim>
+</PropertyList>

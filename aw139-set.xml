@@ -9,7 +9,7 @@ AW139 simulation config.
 <PropertyList>
 	<sim>
 		<description>AugustaWestland AW139</description>
-		<author>Heiko Schulz, Maik Justus (FDM), Melchior Franz (Nasal)</author>
+		<author>Heiko Schulz, Maik Justus (FDM), Melchior Franz (Nasal), LesterBoffo Rotor,liveries and interior animations,coding,patches</author>
 		<status>alpha</status>
 		<license>GPL v2</license>
 		<aircraft-version>0.1</aircraft-version>
@@ -19,33 +19,24 @@ AW139 simulation config.
 		<fuel-fraction>0.8</fuel-fraction>
 
 		<!--<startup>
-			<splash-texture>Aircraft/ec135/splash.rgb</splash-texture>
+			<splash-texture>Aircraft/aw139/splash.png</splash-texture>
 		</startup>-->
 
 		<sound>
-			<path>Aircraft/ec135/Sounds/sound.xml</path>
+			<path>Aircraft/aw139/Sounds/sound.xml</path>
 		</sound>
 
 
 		<instrumentation>
-			<path>Aircraft/ec135/instrumentation/instrumentation.xml</path>
+			<path>Aircraft/aw139/instrumentation/instrumentation.xml</path>
 		</instrumentation>
 
 
 		<model>
 			<path archive="y">Aircraft/aw139/Models/aw139.xml</path>
-			<variant type="int">0</variant>
 			<livery>
-                              <file type="string">Bavarian Police "Edelweiss"</file>
-            </livery>
-	   <liverytail>
-	    <file type="string">Bavarian Police "Edelweiss"</file>
-	    </liverytail>
-	    <rotorblade>
-				<name type="string">Bavarian Police "Edelweiss"</name>
-					 <index type="int">1</index>
-					  <texture>rotorblade.png</texture>
-				</rotorblade>
+                       <file type="string">default</file>
+                 </livery>
 			<aw139>
 				<state type="int">0</state>
 				<rotor-step-deg type="float">-1.0</rotor-step-deg>
@@ -55,17 +46,11 @@ AW139 simulation config.
 				<shortnose type="bool">true</shortnose>
 				<winch>false</winch>
 				<mirror>false</mirror>
-				<wirecutter_skid>false</wirecutter_skid>
-				<wirecutter_up>false</wirecutter_up>
+				<wirecutter>false</wirecutter>
 				<nose>false</nose>
 				<nosefl>true</nosefl>
 				<radardome>false</radardome>
-				<antennaset>true</antennaset>
-				<plateleft>false</plateleft>
-				<plateright>true</plateright>
-				<reardoorwindow>true</reardoorwindow>
-				<reardoor_norm>false</reardoor_norm>
-				
+				<antennaset>true</antennaset>	
 				<doors>
 					<door>
 						<position-norm type="double">0.0</position-norm>
@@ -110,11 +95,11 @@ AW139 simulation config.
 			<type>lookfrom</type>
 			<internal type="bool">true</internal>
 			<config>
-                                        <x-offset-m type="double">0.40</x-offset-m><!--left-->
-				<y-offset-m type="double">-0.56</y-offset-m><!--up-->
-				<z-offset-m type="double">-3.58</z-offset-m><!--back-->
-				<pitch-offset-deg>-14</pitch-offset-deg>
-				<default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+                  <x-offset-m type="double">0.42</x-offset-m><!--left-->
+		      <y-offset-m type="double">-0.099</y-offset-m><!--up-->
+			<z-offset-m type="double">-2.068</z-offset-m><!--back-->
+				<pitch-offset-deg>-12</pitch-offset-deg>
+				<default-field-of-view-deg type="double">75.0</default-field-of-view-deg>
 			</config>
 		</view>
 
@@ -266,12 +251,12 @@ AW139 simulation config.
 	<input>
 		<keyboard>
 		
-		<!--<key n="4">
+		<key n="4">
 				<name>Ctrl-D</name>
 				<desc>Open/close selected door</desc>
 				<binding>
 					<command>nasal</command>
-					<script>ec135.doors.toggle()</script>
+					<script>aw139.doors.toggle()</script>
 				</binding>
 			</key>
 		
@@ -280,7 +265,7 @@ AW139 simulation config.
 				<desc>Select previous door</desc>
 				<binding>
 					<command>nasal</command>
-					<script>ec135.doors.previous()</script>
+					<script>aw139.doors.previous()</script>
 				</binding>
 			</key>
 		
@@ -289,9 +274,9 @@ AW139 simulation config.
 				<desc>Select next door</desc>
 				<binding>
 					<command>nasal</command>
-					<script>ec135.doors.next()</script>
+					<script>aw139.doors.next()</script>
 				</binding>
-			</key>-->
+			</key>
 		
 <key n="4">
     <name>Ctrl-d</name>
@@ -304,8 +289,8 @@ AW139 simulation config.
 
 
 
- <!--
-only needed for test flights and bug hunting 
+ 
+   <!-- only needed for test flights and bug hunting --> 
  <key n="6">
     <name>Ctrl-f</name>
     <desc>Toggle AutoHover</desc>
@@ -318,8 +303,7 @@ only needed for test flights and bug hunting
       <script>ec135.cas.toggleEnable();</script>
     </binding>
 
-  </key>-->
-
+  </key>
 			
 			<key n="82">
 				<name>R</name>
@@ -386,10 +370,10 @@ only needed for test flights and bug hunting
 						<property>/sim/signals/fdm-initialized</property>
 					</condition>
 				</binding>
-				<!-- <binding>
+				<binding>
       <command>nasal</command>
-      <script>ec135.cas.toggleEnable();</script>
-    </binding>-->
+      <script>aw139.cas.toggleEnable();</script>
+    </binding>
 			</key>
 
 			<key n="125">
@@ -402,47 +386,12 @@ only needed for test flights and bug hunting
 						<property>/sim/signals/fdm-initialized</property>
 					</condition>
 				</binding>
-				<!-- <binding>
+				
+				<binding>
       <command>nasal</command>
-      <script>ec135.cas.toggleEnable();</script>
-    </binding>-->
+      <script>aw139.cas.toggleEnable();</script>
+    </binding>
 			</key>
-
-			<key n="79">
-				<name>O</name>
-				<desc>Open aerotow hook</desc>
-				<binding>
-					<command>property-assign</command>
-					<property>/sim/hitches/aerotow/open</property>
-					<value type="bool">true</value>
-				</binding>
-			</key>
-			<key n="111">
-				<name>o</name>
-				<desc>Lock aerotow hook</desc>
-				<binding>
-					<command>property-assign</command>
-					<property>/sim/hitches/aerotow/open</property>
-					<value type="bool">false</value>
-				</binding>
-			</key>
-			<key n="15">
-				<name>Ctrl-o</name>
-				<desc>Find aircraft for aerotow</desc>
-				<binding>
-					<command>property-assign</command>
-					<property>/controls/aerotow/find-aircraft</property>
-					<value type="bool">true</value>
-				</binding>
-				<mod-up>
-					<binding>
-						<command>property-assign</command>
-						<property>/controls/aerotow/find-aircraft</property>
-						<value type="bool">false</value>
-					</binding>
-				</mod-up>
-			</key>
-
 		</keyboard>
 	</input>
 
@@ -454,6 +403,9 @@ only needed for test flights and bug hunting
 			<file>Aircraft/aw139/Nasal/fcs2.nas</file>
 			<file>Aircraft/aw139/Nasal/casdisable.nas</file>
 		</aw139>
+            <liveries>
+                   <file>Aircraft/aw139/Nasal/liveries.nas</file>
+            </liveries>
 	</nasal>
 
 
