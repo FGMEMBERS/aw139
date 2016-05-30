@@ -19,7 +19,7 @@ var max = func(a, b) a > b ? a : b;
 var min = func(a, b) a < b ? a : b;
 
 # liveries =========================================================
-aircraft.livery.init("Aircraft/aw139/Models/liveries");
+#aircraft.livery.init("Aircraft/aw139/Models/liveries");
 
 # timers ============================================================
 aircraft.timer.new("/sim/time/hobbs/helicopter", nil).start();

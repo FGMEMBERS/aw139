@@ -26,11 +26,11 @@ AW139 simulation config.
 			<path>Aircraft/aw139/Sounds/sound.xml</path>
 		</sound>
 
-
+<!-- IH-COL: May 2016, this file does not exist.
 		<instrumentation>
 			<path>Aircraft/aw139/instrumentation/instrumentation.xml</path>
 		</instrumentation>
-
+-->
 
 		<model>
 			<path archive="y">Aircraft/aw139/Models/aw139.xml</path>
