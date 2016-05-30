@@ -398,7 +398,7 @@ AW139 simulation config.
 
 	<nasal>
 		<aw139>
-			<file>Aircraft/aw139/Models/aw139.nas</file>
+			<file>Aircraft/aw139/Nasal/aw139.nas</file>
 			<!--<file>Aircraft/ec135/Nasal/fcs.nas</file>-->
 			<file>Aircraft/aw139/Nasal/fcs2.nas</file>
 			<file>Aircraft/aw139/Nasal/casdisable.nas</file>
