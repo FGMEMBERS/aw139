@@ -28524,7 +28524,7 @@ name "Plane.001"
 loc -0.230436 -0.81043 0
 data 9
 Plane.007
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/leder.png"
+texture "leder.png"
 numvert 1231
 -2.51807 0.453997 -0.00224743
 -2.52003 0.469237 -0.0320881
@@ -37828,7 +37828,7 @@ name "Plane.003"
 loc -0.230436 -0.81043 0
 data 9
 Plane.024
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/leder.png"
+texture "leder.png"
 numvert 825
 -2.51735 0.439627 -0.0601198
 -2.48895 0.443276 -0.0601198
@@ -45928,7 +45928,7 @@ name "leatherbl"
 loc -0.276414 -0.714511 0
 data 8
 Cube.005
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/base1.png"
+texture "Interior/base1.png"
 numvert 236
 -2.57922 -0.497207 -0.376752
 -2.5767 -0.497207 -0.38249
@@ -47747,7 +47747,7 @@ name "leatherbl.001"
 loc -0.276414 -0.714511 0
 data 8
 Cube.003
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/base1.png"
+texture "Interior/base1.png"
 numvert 236
 -2.57922 -0.497207 -0.424233
 -2.5767 -0.497207 -0.418496
@@ -49566,7 +49566,7 @@ name "leatherbl.002"
 loc -0.276414 -0.714511 0
 data 8
 Cube.007
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/base1.png"
+texture "Interior/base1.png"
 numvert 236
 -2.57922 -0.497207 0.359474
 -2.5767 -0.497207 0.365212
@@ -51385,7 +51385,7 @@ name "leatherbl.003"
 loc -0.276414 -0.714511 0
 data 8
 Cube.008
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/base1.png"
+texture "Interior/base1.png"
 numvert 236
 -2.57922 -0.497207 0.406955
 -2.5767 -0.497207 0.401217
@@ -53204,7 +53204,7 @@ name "leatherfl"
 loc -0.276414 -0.714511 0
 data 8
 Cube.001
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/base1.png"
+texture "Interior/base1.png"
 numvert 236
 -2.83234 -0.400997 -0.375409
 -2.83234 -0.400997 -0.347523
@@ -55023,7 +55023,7 @@ name "leatherfl.001"
 loc -0.276414 -0.714511 0
 data 8
 Cube.004
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/base1.png"
+texture "Interior/base1.png"
 numvert 236
 -2.83234 -0.400997 -0.425576
 -2.83234 -0.400997 -0.453463
@@ -56842,7 +56842,7 @@ name "leatherfl.002"
 loc -0.276414 -0.714511 0
 data 8
 Cube.006
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/base1.png"
+texture "Interior/base1.png"
 numvert 236
 -2.83234 -0.400997 0.358131
 -2.83234 -0.400997 0.330245
@@ -58661,7 +58661,7 @@ name "leatherfl.003"
 loc -0.276414 -0.714511 0
 data 8
 Cube.009
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/base1.png"
+texture "Interior/base1.png"
 numvert 236
 -2.83234 -0.400997 0.408298
 -2.83234 -0.400997 0.436185
@@ -60478,7 +60478,7 @@ kids 0
 OBJECT poly
 name "RL-ruddpedal"
 loc -0.276414 -0.714511 0
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/Kopie von pedals.png"
+texture "Interior/Kopie von pedals.png"
 numvert 254
 -2.48581 -0.400938 -0.352971
 -2.48237 -0.395782 -0.352971
@@ -62725,7 +62725,7 @@ kids 0
 OBJECT poly
 name "RR-ruddpedal"
 loc -0.276414 -0.714511 0
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/Kopie von pedals.png"
+texture "Interior/Kopie von pedals.png"
 numvert 254
 -2.48581 -0.400938 -0.448015
 -2.48237 -0.395782 -0.448015
@@ -64972,7 +64972,7 @@ kids 0
 OBJECT poly
 name "LR-ruddpedal"
 loc -0.276414 -0.714511 0
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/Kopie von pedals.png"
+texture "Interior/Kopie von pedals.png"
 numvert 254
 -2.48581 -0.400938 0.335693
 -2.48237 -0.395782 0.335693
@@ -68165,7 +68165,7 @@ kids 0
 OBJECT poly
 name "LL-ruddpedal"
 loc -0.276414 -0.714511 0
-texture "C:/Program Files/FlightGear 3.4.0/data/Aircraft/bk117/Models/Interior/Kopie von pedals.png"
+texture "Interior/Kopie von pedals.png"
 numvert 254
 -2.48581 -0.400938 0.430736
 -2.48237 -0.395782 0.430736
