@@ -58,7 +58,8 @@
     <object-name>side-doors</object-name>
     <object-name>antenna</object-name>
     <object-name>wirecutter</object-name>
-
+    <object-name>tailrotor-fairing</object-name>
+    
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>defaultaw139ext.png</texture>

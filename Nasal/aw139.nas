@@ -955,7 +955,7 @@ var main_loop = func {
 	if (replay)
 		setprop("/position/gear-agl-m", getprop("/position/altitude-agl-ft") * 0.3 - 1.2);
 	vert_speed_fpm.setDoubleValue(vertspeed.getValue() * 60);
-	gross_weight_kg.setDoubleValue(gross_weight_lb.getValue() * LB2KG);
+	#gross_weight_kg.setDoubleValue(gross_weight_lb.getValue() * LB2KG);
 
 
 	var dt = delta_time.getValue();

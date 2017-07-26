@@ -18,9 +18,28 @@ AW139 simulation config.
 		<aero>aw139</aero>
 		<fuel-fraction>0.8</fuel-fraction>
 
-		<!--<startup>
-			<splash-texture>Aircraft/aw139/splash.png</splash-texture>
-		</startup>-->
+		<startup>
+			<splash-texture>Aircraft/aw139/Splash/splash1.jpg</splash-texture>
+			<splash-texture>Aircraft/aw139/Splash/splash2.jpg</splash-texture>
+			<splash-texture>Aircraft/aw139/Splash/splash3.jpg</splash-texture>
+		</startup>
+		<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash1.jpg</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash2.jpg</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash3.jpg</path>
+			</preview>
+		</previews>
 
 		<sound>
 			<path>Aircraft/aw139/Sounds/sound.xml</path>
