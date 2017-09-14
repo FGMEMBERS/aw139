@@ -945,7 +945,7 @@ dynamic_view.register(func {
 var delta_time = props.globals.getNode("/sim/time/delta-sec", 1);
 var hi_heading = props.globals.getNode("/instrumentation/heading-indicator/indicated-heading-deg", 1);
 var vertspeed = props.globals.initNode("/velocities/vertical-speed-fps");
-var gross_weight_lb = props.globals.initNode("/yasim/gross-weight-lbs");
+var gross_weight_lb = props.globals.initNode("fdm/yasim/gross-weight-lbs");
 var gross_weight_kg = props.globals.initNode("/sim/model/gross-weight-kg");
 props.globals.getNode("/instrumentation/adf/rotation-deg", 1).alias(hi_heading);
 
