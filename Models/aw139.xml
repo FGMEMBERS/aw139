@@ -38,6 +38,10 @@
     </unload>
   </nasal>
 
+  <sound>
+  	<path>Aircraft/aw139/Sounds/mp-sound.xml</path>
+  </sound>
+
 <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>frontglass</object-name>
