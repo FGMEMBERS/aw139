@@ -1,5 +1,5 @@
 # AgustaWestland AW139
-FG Aircraft | Augusta Westland AW139 Helicopter by Heiko Schulz et al.,. Updated by Lester
+FG Aircraft | Agusta Westland AW139 Helicopter by Heiko Schulz et al.,. Updated by Lester
 
 Max Gross weight: 14110 lbs
   Empty weight: 7985 lbs 
