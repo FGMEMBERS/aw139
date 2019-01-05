@@ -41,14 +41,15 @@
   <sound>
   	<path>Aircraft/aw139/Sounds/mp-sound.xml</path>
   </sound>
-
+<!--
 <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>frontglass</object-name>
     <object-name>frnt-sideglass</object-name>
     <object-name>inspection-glass</object-name>
     <object-name>sideglass</object-name>
-    </effect>
+ </effect>
+ -->
 
   <animation>
     <type>material</type>
@@ -505,6 +506,24 @@
 		</condition>
 </animation>
 
-
+<effect>
+  <inherits-from>Aircraft/aw139/Models/Effects/reflectglas-uber</inherits-from>
+  <object-name>frnt-sideglass</object-name>
+  <object-name>sideglass</object-name>
+  <object-name>front-sideglass</object-name>
+  <object-name>frontglass</object-name>
+ </effect>
+	
+  <model>
+    <path>Aircraft/aw139/Models/Interior/Interior.xml</path>
+    <offsets>
+      <x-m>  0.00 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.00 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
 
 </PropertyList>
