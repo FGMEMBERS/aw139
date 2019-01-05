@@ -8,7 +8,7 @@ AW139 simulation config.
 
 <PropertyList>
 	<sim>
-		<description>AugustaWestland AW139</description>
+		<description>AgustaWestland AW139</description>
 		<author>Heiko Schulz, Maik Justus (FDM), Melchior Franz (Nasal), LesterBoffo Rotor,liveries and interior animations,coding,patches</author>
 		<status>alpha</status>
 		<license>GPL v2</license>
